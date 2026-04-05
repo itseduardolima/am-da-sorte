@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazonas da Sorte</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Edu da Sorte</h1>
+    <p>Marque os números sorteados e acompanhe todas as suas cartelas</p>
+  </header>
+
+  <!-- PAINEL DE CONTROLE -->
+  <div class="painel-section">
+    <h2>Painel de Números</h2>
+    <div class="painel-info">
+      <div class="contador">Marcados: <span id="qtd-marcados">0</span> / 60</div>
+      <button class="btn-limpar-marcacoes" onclick="limparMarcacoes()">Limpar Marcações</button>
+    </div>
+    <div class="painel-grid" id="painel"></div>
+  </div>
+
+  <!-- GERADOR -->
+  <div class="gerador-section">
+    <label for="qtd-cartelas">Quantidade de cartelas:</label>
+    <input type="number" id="qtd-cartelas" value="6" min="1" max="200" />
+    <button class="btn btn-gerar" onclick="gerarCartelas()">Gerar Cartelas</button>
+    <button class="btn btn-nova-rodada" onclick="novaRodada()">Nova Rodada</button>
+  </div>
+
+  <!-- LISTAGEM DE CARTELAS -->
+  <div class="cartelas-header" id="cartelas-header" style="display:none;">
+    Suas Cartelas (<span id="qtd-cartelas-geradas">0</span>)
+  </div>
+  <div class="cartelas-grid" id="cartelas-container">
+    <div class="empty-state">Escolha a quantidade de cartelas e clique em "Gerar Cartelas"</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
